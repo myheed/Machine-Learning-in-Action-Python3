@@ -7,6 +7,7 @@ Created on Wed Jul  4 13:35:15 2018
 
 from Cal_Entropy import *
 
+
 def Split_Data(dataset, axis, value):
     '''
     使用传入的axis以及value划分数据集
@@ -22,8 +23,9 @@ def Split_Data(dataset, axis, value):
             new_subset.append(feature_split)
     # extend将VEC中的元素一一纳入feature_split
     # append则将feature_split作为列表结合进目标集合
-            
+
     return new_subset
+
 
 def Split_by_entropy(dataset):
     '''
@@ -48,11 +50,11 @@ def Split_by_entropy(dataset):
             prob = len(sub_set) / float(len(dataset))
             # 使用熵计算函数求出划分后的熵值
             ent_new += prob * (0 - cal_entropy(sub_set))
-        
+
         # 由ent_old - ent_new选出划分对应的最优特征
         Info_gain = ent_old - ent_new
-        if(Info_gain > best_gain):
+        if (Info_gain > best_gain):
             best_gain = Info_gain
             best_feature = i
-            
+
     return best_feature
