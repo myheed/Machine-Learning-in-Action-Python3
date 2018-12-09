@@ -32,13 +32,12 @@ def Test_accuray(split_ratio, test_set, test_label):
     error = 0
 
     for i in range(rows_test):
-        Result = classify_KNN(norm_test[i, :], norm_test[rows_test:rows], \
-                              test_label[rows_test:rows], 3)
+        Result = classify_KNN(norm_test[i, :], norm_test[rows_test:rows], test_label[rows_test:rows], 4)
         # 参数1表示从测试集（此处约会数据是随机的因此抽取前10%即可）中抽取一个实例
-        # 参数2，3，4使用后90%作为训练数据，为输入的实例进行投票并分类，K=3
+        # 参数2，3，4使用后90%作为训练数据，为输入的实例进行投票并分类，K=4
+        # 测试可知，当K=4时，结果比较好
 
-        print("the classifier came with: %d, the real answer is :%d " \
-              % (Result, test_label[i]))
+        # print("the classifier came with: {}, the real answer is :{}".format(Result, test_label[i]))
         if (Result != test_label[i]): error += 1
         # print(type(error)) #for test
 

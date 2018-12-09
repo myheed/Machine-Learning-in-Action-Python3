@@ -20,10 +20,10 @@ if __name__ == '__main__':
     DataMat, LabelMat = file_parse_matrix('datingTestSet2.txt')
     # print(DataMat, shape(DataMat), LabelMat)
 
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.scatter(DataMat[:, 1], DataMat[:, 2])
-    plt.show()
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)
+    # ax.scatter(DataMat[:, 0], DataMat[:, 1])
+    # plt.show()
 
     dating_mat, label_mat = file_parse_matrix('datingTestSet2.txt')
     # 归一化
@@ -33,5 +33,5 @@ if __name__ == '__main__':
     testVec = img2vec('digits/testDigits/0_13.txt')
     print(testVec)
 
-    HandWritingTest('digits/trainingDigits', 'digits/testDigits/')
+    # HandWritingTest('digits/trainingDigits', 'digits/testDigits/')
     # 这行代码耗时比较久，可以单独运行
