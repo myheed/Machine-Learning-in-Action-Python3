@@ -19,7 +19,7 @@ from TestData import createDataSet, Test_accuray
 if __name__ == '__main__':
     # 测试数据
     group, labels = createDataSet()
-    classify_KNN([0, 0], group, labels, 3)
+    print(classify_KNN([0, 0], group, labels, 3))
 
     DataMat, LabelMat = file_parse_matrix('datingTestSet2.txt')
     print(DataMat, shape(DataMat), LabelMat)
