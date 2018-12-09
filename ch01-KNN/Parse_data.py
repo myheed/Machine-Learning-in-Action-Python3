@@ -23,7 +23,7 @@ def file_parse_matrix(filename):
         
         for line in Arr_lines:
             line = line.strip()
-            listFromLine = line.split('\t')  #按换行符分割数据
+            listFromLine = line.split('\t')  #按制表符分割数据
             #将文本数据前三行存入数据矩阵，第四行存入标签向量
             return_mat[index,:] = listFromLine[0:3]
             label_vec.append(int(listFromLine[3]))
