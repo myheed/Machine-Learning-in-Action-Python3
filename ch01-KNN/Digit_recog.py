@@ -6,7 +6,6 @@ Created on Tue Jul  3 12:06:45 2018
 """
 
 from os import listdir
-from numpy import *
 from KNN_algr import *
 
 

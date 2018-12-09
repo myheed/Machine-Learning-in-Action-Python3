@@ -24,6 +24,8 @@ def file_parse_matrix(filename):
 
         for line in Arr_lines:
             line = line.strip()
+            # Python strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列。
+            # 注意：该方法只能删除开头或是结尾的字符，不能删除中间部分的字符。
             listFromLine = line.split('\t')  # 按制表符分割数据
             # 将文本数据前三行存入数据矩阵，第四行存入标签向量
             return_mat[index, :] = listFromLine[0:3]
