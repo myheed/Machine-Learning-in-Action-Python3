@@ -24,7 +24,6 @@ if __name__ == '__main__':
     ax = fig.add_subplot(111)
     ax.scatter(DataMat[:, 1], DataMat[:, 2])
     plt.show()
-    print(1)
 
     dating_mat, label_mat = file_parse_matrix('datingTestSet2.txt')
     # 归一化

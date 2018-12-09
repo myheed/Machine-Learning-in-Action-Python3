@@ -17,12 +17,14 @@ def createDataSet():
     return group, labels
 
 
-'''书上的测试函数没有参数，是自适应函数
- 此处传入分割参数以及测试集，可以修改测试数值（使用书上的0.1作为分割率）
- '''
-
-
 def Test_accuray(split_ratio, test_set, test_label):
+    """
+    书上的测试函数没有参数，是自适应函数此处传入分割参数以及测试集，可以修改测试数值（使用书上的0.1作为分割率）
+    :param split_ratio: 此处传入分割参数以及测试集，可以修改测试数值（使用书上的0.1作为分割率）
+    :param test_set: 数据
+    :param test_label: 数据 lavel
+    :return: 准确率/错误率
+    """
     norm_test, ranges, Min = Norm_feature(test_set)
     rows = norm_test.shape[0]
     rows_test = int(rows * split_ratio)
