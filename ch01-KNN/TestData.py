@@ -23,7 +23,7 @@ def Test_accuray(split_ratio, test_set, test_label):
     :param split_ratio: 此处传入分割参数以及测试集，可以修改测试数值（使用书上的0.1作为分割率）
     :param test_set: 数据
     :param test_label: 数据 lavel
-    :return: 准确率/错误率
+    :return:
     """
     norm_test, ranges, Min = Norm_feature(test_set)
     rows = norm_test.shape[0]
