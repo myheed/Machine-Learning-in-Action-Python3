@@ -20,10 +20,10 @@ if __name__ == '__main__':
     DataMat, LabelMat = file_parse_matrix('datingTestSet2.txt')
     # print(DataMat, shape(DataMat), LabelMat)
 
-    # fig = plt.figure()
-    # ax = fig.add_subplot(111)
-    # ax.scatter(DataMat[:, 0], DataMat[:, 1])
-    # plt.show()
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.scatter(DataMat[:, 0], DataMat[:, 1], 15.0 * array(LabelMat), 15.0 * array(LabelMat))
+    plt.show()
 
     dating_mat, label_mat = file_parse_matrix('datingTestSet2.txt')
     # 归一化
