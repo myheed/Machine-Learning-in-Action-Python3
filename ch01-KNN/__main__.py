@@ -7,7 +7,14 @@ Created on Mon Jul  2 21:18:57 2018
 
 # from numpy import *
 # from Digit_recog import *
+from numpy import shape
+import matplotlib.pyplot as plt
 
+from Digit_recog import img2vec
+from Feature_scaling import Norm_feature
+from KNN_algr import classify_KNN
+from Parse_data import file_parse_matrix
+from TestData import createDataSet, Test_accuray
 
 if __name__ == '__main__':
     # 测试数据
