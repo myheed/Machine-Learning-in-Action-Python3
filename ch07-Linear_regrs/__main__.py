@@ -13,5 +13,5 @@ from Ridge_regre import *
 from Stand_Linear import *
 
 if __name__ == '__main__':
-    lgX=[]; lgY=[]
-    
+    lgX = [];
+    lgY = []
