@@ -10,6 +10,8 @@ Created on Sat Jul 14 15:05:20 2018
 # @eps：每次迭代需要调整的步长
 from numpy import *
 
+from Local_weightLR import rssError
+
 
 def stageWise(xArr, yArr, eps=0.01, numIt=100):
     xMat = mat(xArr);

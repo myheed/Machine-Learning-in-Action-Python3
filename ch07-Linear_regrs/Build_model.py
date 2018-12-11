@@ -5,16 +5,23 @@ Created on Sat Jul 14 15:06:05 2018
 @author: Administrator
 """
 
-
 # 训练算法：建立模型
 # 交叉验证测试岭回归
 # @xArr:从网站中获得的玩具套装样本数据
 # @yArr：样本对应的出售价格
 # @numVal:交叉验证次数
+import random
+
+from numpy import *
+
+from Local_weightLR import rssError
+from Ridge_regre import ridgeRegres
+
+
 def crossValidation(xArr, yArr, numVal=10):
     # m,n=shape(xArr)
-    # xArr1=mat(ones((m,n+1)))
-    # xArr1[:,1:n+1]=mat(xArr)
+    # xArr=mat(ones((m,n+1)))
+    # xArr[:,1:n+1]=mat(xArr)
     # 获取样本数
     m = len(yArr)
     indexList = range(m)
@@ -32,11 +39,11 @@ def crossValidation(xArr, yArr, numVal=10):
         for j in range(m):
             # 数据集90%作为训练集
             if j < m * 0.9:
-                trainX.append(xArr1[indexList[j]])
+                trainX.append(xArr[indexList[j]])
                 trainY.append(yArr[indexList[j]])
             # 剩余10%作为测试集
             else:
-                testX.append(xArr1[indexList[j]])
+                testX.append(xArr[indexList[j]])
                 testY.append(yArr[indexList[j]])
         # 利用训练集计算岭回归系数
         wMat = ridgeRegres(trainX, trainY)
